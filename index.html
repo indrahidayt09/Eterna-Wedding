@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eterna Wedding</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="mobile.css">
+    
+    <script src="https://cdn.tailwindcss.com/3.4.16"></script>
+    <script src="https://unpkg.com/feather-icons"></script>
+</head>
+<body>
+
+    <!-- Navbar Section -->
+     <header>
+        <div class="navbar">
+
+            <!-- navLink-1 -->
+            <div class="nav-link">
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">Tentang Kami</a></li>
+                    <li><a href="#contactModal" id="">Hubungi Kami</a></li>
+                </ul>
+            </div>
+
+            <!-- navLogo -->
+             <div class="nav-logo">
+                <h1>Eterna Wedding</h1>
+             </div>
+
+            <!-- navLink-2 -->
+            <div class="nav-link">
+                <ul>
+                    <li><a href="#services">Layanan Kami</a></li>
+                    <li><a href="#gallery">Gallery</a></li>
+                    <li><a href="#packages">Paket & Harga</a></li>
+                </ul>
+            </div>
+        </div>
+     </header>
+
+     <main class="main-content">
+        <!-- Hero Section -->
+        <section class="hero" id="home">
+            <div class="hero-overlay"></div>
+
+            <div class="hero-content">
+                <h2 class="hero-subtitle">Mewujudkan Pernikahan Impian Anda</h2>
+                <h1 class="hero-title">Eterna Wedding</h1>
+                <p class="hero-text">Kami menciptakan momen tak terlupakan dengan sentuhan elegan dan perhatian pada setiap detail</p>
+            </div>
+            
+            <!-- Scroll indicator -->
+            <div class="scroll-indicator">
+                <i data-feather="chevron-down"></i>
+            </div>
+        </section>
+
+        <!-- =========== About Section =========== -->
+        <section class="about-section" id="about">
+            <div class="container">
+                <div class="section-header">
+                    <h1 class="section-title">Cerita Kami</h1>
+                    <div class="divider"></div>
+                </div>
+                
+                <div class="about-content">
+                    <div class="about-item">
+                        <div class="about-icon">
+                            <i data-feather="heart"></i>
+                        </div>
+                        <h3>Passion</h3>
+                        <p>Kami percaya setiap pernikahan adalah cerita unik yang layak dikisahkan dengan sempurna melalui detail-detail penuh makna.</p>
+                    </div>
+                    
+                    <div class="about-item">
+                        <div class="about-icon">
+                            <i data-feather="award"></i>
+                        </div>
+                        <h3>Pengalaman</h3>
+                        <p>Lebih dari 10 tahun membantu 250+ pasangan mewujudkan hari bahagia mereka dengan konsep yang personal.</p>
+                    </div>
+                    
+                    <div class="about-item">
+                        <div class="about-icon">
+                            <i data-feather="star"></i>
+                        </div>
+                        <h3>Filosofi</h3>
+                        <p>Kesempurnaan terletak pada detail kecil - itulah yang membuat momen menjadi kenangan abadi.</p>
+                    </div>
+                </div>
+                
+                <div class="about-signature">
+                    <div class="signature">Tim Eterna</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ======== Services Section ========= -->
+        <section id="services" class="services-section">
+            <div class="container">
+                <div class="services-grid">
+                    <div class="services-intro">
+                        <h2>Layanan Kami</h2>
+                        <p class="intro-text">Kami menawarkan berbagai layanan pernikahan komprehensif untuk memastikan hari spesial Anda berjalan sempurna. Dari perencanaan awal hingga eksekusi, tim kami akan mendampingi Anda di setiap langkah.</p>
+                        <img src="https://readdy.ai/api/search-image?query=elegant%20wedding%20couple%20holding%20hands%2C%20professional%20wedding%20photography%2C%20romantic%20moment%2C%20soft%20lighting%2C%20dreamy%20atmosphere&width=600&height=400&seq=4&orientation=landscape" alt="Layanan Pernikahan" class="services-image">
+                    </div>
+                    
+                    <div class="services-list">
+                        <div class="service-card">
+                            <div class="service-icon">
+                                <i data-feather="camera"></i>
+                            </div>
+                            <div class="service-content">
+                                <h3>Fotografi & Videografi</h3>
+                                <p>Mengabadikan momen berharga Anda dengan sentuhan artistik dan profesional untuk kenangan abadi.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="service-card">
+                            <div class="service-icon">
+                                <i data-feather="calendar"></i>
+                            </div>
+                            <div class="service-content">
+                                <h3>Perencanaan & Koordinasi</h3>
+                                <p>Kami menangani seluruh detail perencanaan dan koordinasi agar Anda dapat menikmati hari spesial tanpa khawatir.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="service-card">
+                            <div class="service-icon">
+                                <i data-feather="archive"></i>
+                            </div>
+                            <div class="service-content">
+                                <h3>Dekorasi & Styling</h3>
+                                <p>Menciptakan suasana yang memukau dengan dekorasi yang disesuaikan dengan tema dan gaya pernikahan Anda.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ======== Packages Section ======= -->
+        <section id="packages" class="packages-section">
+            <div class="container">
+                <h2>Paket & Harga</h2>
+                
+                <div class="packages-grid">
+                    <!-- Paket Intimate -->
+                    <div class="package-card">
+                        <img src="https://readdy.ai/api/search-image?query=elegant%20small%20intimate%20wedding%20ceremony%2C%20soft%20lighting%2C%20romantic%20atmosphere%2C%20professional%20wedding%20photography&width=600&height=400&seq=5&orientation=landscape" alt="Paket Intimate">
+                        <div class="package-content">
+                            <h3>PAKET INTIMATE</h3>
+                            <p class="price">Rp 15.000.000</p>
+                            <ul>
+                                <li>Max 50 undangan</li>
+                                <li>Fotografi 8 jam</li>
+                                <li>Dekorasi standard</li>
+                                <li>1 album foto premium</li>
+                                <li>File foto digital</li>
+                            </ul>
+                            <button class="package-button"  onclick="openModal('Paket Intimate', 15000000)">Pilih Paket</button>
+                        </div>
+                    </div>
+                    
+                    <!-- Paket Classic -->
+                    <div class="package-card popular">
+                        <div class="popular-badge">PALING POPULER</div>
+                        <img src="https://readdy.ai/api/search-image?query=elegant%20medium%20size%20wedding%20ceremony%20with%20beautiful%20decorations%2C%20professional%20wedding%20photography%2C%20romantic%20atmosphere&width=600&height=400&seq=6&orientation=landscape" alt="Paket Classic">
+                        <div class="package-content">
+                            <h3>PAKET CLASSIC</h3>
+                            <p class="price">Rp 25.000.000</p>
+                            <ul>
+                                <li>Max 150 undangan</li>
+                                <li>Fotografi & videografi full day</li>
+                                <li>Dekorasi premium</li>
+                                <li>2 album foto premium</li>
+                                <li>Video highlight 5 menit</li>
+                                <li>Koordinator acara</li>
+                            </ul>
+                            <button class="package-button" onclick="openModal('Paket Classic', 25000000)">Pilih Paket</button>
+                        </div>
+                    </div>
+                    
+                    <!-- Paket Luxury -->
+                    <div class="package-card">
+                        <img src="https://readdy.ai/api/search-image?query=elegant%20luxury%20wedding%20ceremony%20with%20grand%20decorations%2C%20professional%20wedding%20photography%2C%20romantic%20atmosphere%2C%20large%20venue&width=600&height=400&seq=7&orientation=landscape" alt="Paket Luxury">
+                        <div class="package-content">
+                            <h3>PAKET LUXURY</h3>
+                            <p class="price">Rp 45.000.000</p>
+                            <ul>
+                                <li>Unlimited undangan</li>
+                                <li>Fotografi & videografi 2 hari</li>
+                                <li>Dekorasi luxury custom</li>
+                                <li>3 album foto premium</li>
+                                <li>Video dokumenter 15 menit</li>
+                                <li>Tim koordinator penuh</li>
+                            </ul>
+                            <button class="package-button" onclick="openModal('Paket Luxury', 45000000)">Pilih Paket</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Booking Modal -->
+        <div id="bookingModal" class="modal">
+            <div class="modal-content">
+                <span class="close-btn" onclick="closeModal()">&times;</span>
+                <h3>Form Pemesanan</h3>
+                <p>Anda memilih: <span id="selectedPackage"></span></p>
+                <p>Harga: <span id="packagePrice"></span></p>
+                
+                <form id="bookingForm">
+                    <div class="form-group">
+                        <input type="text" id="name" placeholder="Nama Lengkap" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="tel" id="phone" placeholder="Nomor WhatsApp" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" id="email" placeholder="Email">
+                    </div>
+                    <div class="form-group">
+                        <input type="date" id="weddingDate" required>
+                    </div>
+                    <button type="button" onclick="sendToWhatsApp()" class="submit-btn">Kirim via WhatsApp</button>
+                </form>
+            </div>
+        </div>
+
+        <!-- ====== Gallery Section ====== -->
+        <section class="gallery-section" id="gallery">
+            <div class="container">
+                <h2 class="section-title">Galeri Kami</h2>
+                <p class="section-subtitle">Momen-momen indah yang kami abadikan</p>
+                
+                <div class="gallery-grid">
+                    <!-- Item 1 -->
+                    <div class="gallery-item">
+                        <img src="https://readdy.ai/api/search-image?query=elegant%20wedding%20couple%20holding%20hands%2C%20close%20up%20shot%2C%20romantic%20moment%2C%20soft%20lighting%2C%20professional%20wedding%20photography%2C%20dreamy%20atmosphere&width=600&height=800&seq=2&orientation=portrait" loading="lazy">
+                        <div class="overlay">
+                            <i data-feather="zoom-in"></i>
+                        </div>
+                    </div>
+                    
+                    <!-- Item 2 -->
+                    <div class="gallery-item">
+                        <img src="https://i.pinimg.com/736x/65/36/95/6536953211289021b8397ac5b8b9867c.jpg" loading="lazy">
+                        <div class="overlay">
+                            <i data-feather="zoom-in"></i>
+                        </div>
+                    </div>
+                    
+                    <!-- Item 3 -->
+                    <div class="gallery-item">
+                        <img src="https://i.pinimg.com/736x/ba/e2/03/bae203e3c7483913e36ec8636dff8adf.jpg" alt="Tempat Duduk Tamu" loading="lazy">
+                        <div class="overlay">
+                            <i data-feather="zoom-in"></i>
+                        </div>
+                    </div>
+                    
+                    <!-- Item 4 -->
+                    <div class="gallery-item">
+                        <img src="https://i.pinimg.com/736x/df/6d/4d/df6d4d5ca6fedd591126c7625865ace4.jpg" alt="First Dance" loading="lazy">
+                        <div class="overlay">
+                            <i data-feather="zoom-in"></i>
+                        </div>
+                    </div>
+                    
+                    <!-- Item 5 -->
+                    <div class="gallery-item">
+                        <img src="https://i.pinimg.com/736x/30/9a/c1/309ac15f475029c7876c915d6d3f5173.jpg" alt="Rangkaian Bunga" loading="lazy">
+                        <div class="overlay">
+                            <i data-feather="zoom-in"></i>
+                        </div>
+                    </div>
+                    
+                    <!-- Item 6 -->
+                    <div class="gallery-item">
+                        <img src="https://i.pinimg.com/736x/e2/e7/e1/e2e7e168dc0379145bb8fe6a1182dcc7.jpg" alt="Potong Kue" loading="lazy">
+                        <div class="overlay">
+                            <i data-feather="zoom-in"></i>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Slider Navigation -->
+                <div class="slider-nav">
+                    <button class="slider-prev"><i data-feather="chevron-left"></i></button>
+                    <div class="slider-dots"></div>
+                    <button class="slider-next"><i data-feather="chevron-right"></i></button>
+                </div>
+            </div>
+            
+            <!-- Lightbox Modal -->
+            <div class="lightbox">
+                <span class="close-btn">&times;</span>
+                <img class="lightbox-img" src="" alt="">
+            </div>
+        </section>
+
+        <!-- ======== Testimonial ======== -->
+        <section class="testimonials">
+            <div class="container">
+                <h2 class="section-title"> Apa Kata Mereka</h2>
+                <p class="section-subtitle">Testimoni Klien Kami</p>
+                
+                <div class="testimonial-slider">
+                    <!-- Testimonial 1 -->
+                    <div class="testimonial-card active">
+                        <div class="testimonial-content">
+                            <p>"Eterna Wedding membuat hari pernikahan kami sempurna! Perhatian mereka terhadap detail benar-benar di luar ekspektasi."</p>
+                        </div>
+                        <div class="testimonial-author">
+                            <div class="author-info">
+                                <h4>Sarah & Michael</h4>
+                                <p>Wedding, Juni 2023</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Testimonial 2 -->
+                    <div class="testimonial-card">
+                        <div class="testimonial-content">
+                            <p>"Pelayanan profesional dari awal hingga akhir. Timnya sangat membantu dan kreatif dalam mewujudkan konsep yang kami inginkan."</p>
+                        </div>
+                        <div class="testimonial-author">
+                            <div class="author-info">
+                                <h4>Dian & Raka</h4>
+                                <p>Engagement, Maret 2023</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Testimonial 3 -->
+                    <div class="testimonial-card">
+                        <div class="testimonial-content">
+                            <p>"Hasil dekorasinya lebih indah dari yang kami bayangkan. Semua tamu terpesona dengan suasana yang tercipta."</p>
+                        </div>
+                        <div class="testimonial-author">
+                            <div class="author-info">
+                                <h4>Bella & Kevin</h4>
+                                <p>Wedding, Desember 2022</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Slider Dots -->
+                <div class="slider-dots">
+                    <span class="dot active"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                </div>
+            </div>
+        </section>
+
+        <!-- ======= Kontak Section ====== -->
+        <div id="contactModal" class="contact-modal">
+            <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            
+            <div class="modal-header">
+                <h3><i data-feather="mail"></i> Hubungi Kami</h3>
+                <p>Isi form berikut untuk konsultasi pernikahan Anda</p>
+            </div>
+            
+            <form id="contactForm">
+                <div class="form-group">
+                <input type="text" id="contactName" placeholder="Nama Lengkap" required>
+                </div>
+                
+                <div class="form-group">
+                <input type="tel" id="contactPhone" placeholder="Nomor WhatsApp" required>
+                </div>
+                
+                <div class="form-group">
+                <select id="contactPackage" required>
+                    <option value="" disabled selected>Pilih Paket</option>
+                    <option value="Intimate">Paket Intimate (Rp15jt)</option>
+                    <option value="Classic">Paket Classic (Rp25jt)</option>
+                    <option value="Luxury">Paket Luxury (Rp45jt)</option>
+                    <option value="Custom">Custom Package</option>
+                </select>
+                </div>
+                
+                <div class="form-group">
+                <textarea id="contactNotes" rows="3" placeholder="Catatan tambahan..."></textarea>
+                </div>
+                
+                <button type="submit" class="submit-btn">
+                <i data-feather="send"></i> Kirim via WhatsApp
+                </button>
+            </form>
+            </div>
+        </div>
+
+        <!-- Floating WhatsApp Button -->
+        <a href="https://wa.me/6281234567890" class="whatsapp-float" target="_blank">
+            <i data-feather="message-circle"></i>
+            <span>Konsultasi</span>
+        </a>
+     </main>
+
+     <!-- ========= Footer Section ======= -->
+     <footer class="footer">
+        <div class="footer-container">
+            <!-- Bagian Logo & Deskripsi -->
+            <div class="footer-brand">
+                <h3 class="footer-logo">Eterna Wedding</h3>
+                <p class="footer-description">
+                    Menciptakan momen tak terlupakan dengan sentuhan elegan dan perhatian pada setiap detail pernikahan Anda.
+                </p>
+                <div class="social-links">
+                    <a href="#"><i data-feather="instagram"></i></a>
+                    <a href="#"><i data-feather="facebook"></i></a>
+                    <a href="#"><i data-feather="youtube"></i></a>
+                    <a href="#"><i data-feather="mail"></i></a>
+                </div>
+            </div>
+    
+            <!-- Menu Footer -->
+            <div class="footer-menus">
+                <div class="footer-menu">
+                    <h4 class="menu-title">Menu</h4>
+                    <ul>
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">Tentang Kami</a></li>
+                        <li><a href="#">Layanan</a></li>
+                        <li><a href="#">Portfolio</a></li>
+                        <li><a href="#">Kontak</a></li>
+                    </ul>
+                </div>
+    
+                <div class="footer-menu">
+                    <h4 class="menu-title">Layanan</h4>
+                    <ul>
+                        <li><a href="#">Full Wedding Planning</a></li>
+                        <li><a href="#">Partial Planning</a></li>
+                        <li><a href="#">Day-of Coordination</a></li>
+                        <li><a href="#">Dekorasi</a></li>
+                        <li><a href="#">Fotografi</a></li>
+                    </ul>
+                </div>
+    
+                <div class="footer-menu">
+                    <h4 class="menu-title">Kontak</h4>
+                    <ul class="contact-info">
+                        <li><i data-feather="map-pin"></i> Jl. Pernikahan Indah No.123, Jakarta</li>
+                        <li><i data-feather="phone"></i> +62 812 3456 7890</li>
+                        <li><i data-feather="mail"></i> hello@eternawedding.com</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    
+        <!-- Copyright -->
+        <div class="copyright">
+            <p>&copy; 2023 Eterna Wedding. All rights reserved.</p>
+        </div>
+    </footer>
+
+
+
+
+
+
+
+    <script src="script.js"></script>
+
+    <script>
+        feather.replace();
+      </script>
+</body>
+</html>

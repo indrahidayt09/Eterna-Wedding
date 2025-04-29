@@ -1,0 +1,1433 @@
+/* Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,300..700;1,300..700&family=Pacifico&family=Pinyon+Script&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&display=swap');
+
+/* Roots Colors */
+:root {
+    --primary: #907b53;
+    --secondary1: #bfa46f;
+    --secondary: #bfa46f;
+    --dark: #412f14;
+    --beige: #f7f0e8;
+    --light: #f3f1f1;
+}
+
+/* Roots Html */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+
+}
+
+body {
+    font-family: 'Red Hat Display', sans-serif;
+    background-color: rgb(255, 255, 255);
+    color: var(--dark);
+    line-height: 1.6;
+}
+
+/* Navbar Styles */
+header {
+    background-color: var(--light);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    padding: .5rem 0;
+    font-family: "Red Hat Display", sans-serif;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+.nav-logo h1 {
+    font-family: "Pinyon Script", sans-serif;
+    font-size: 2rem;
+    color: var(--dark);
+    margin: 0;
+    font-weight: 400;
+}
+
+.nav-link ul {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-link a {
+    text-decoration: none;
+    color: var(--dark);
+    font-weight: 500;
+    font-size: .9rem;
+    position: relative;
+    transition: all 0.3s ease;
+    padding: 0.5rem 0;
+}
+
+.nav-link a:hover {
+    color: var(--primary);
+}
+
+.nav-link a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: var(--primary);
+    transition: width 0.3s ease;
+}
+
+.nav-link a:hover::after {
+    width: 100%;
+}
+
+/* Mobile Menu Toggle (hidden by default) */
+.menu-toggle {
+    display: none;
+    cursor: pointer;
+    color: var(--dark);
+}
+
+/* =========== Hero Styles =========== */
+.hero {
+    position: relative;
+    height: 100vh;
+    min-height: 600px;
+    background: url('https://readdy.ai/api/search-image?query=elegant%20wedding%20scene%20with%20soft%20peach%20roses%20and%20white%20flowers%2C%20dreamy%20romantic%20atmosphere%2C%20professional%20wedding%20photography%20style%2C%20soft%20focus%2C%20muted%20colors%2C%20natural%20light&width=1280&height=720&seq=1&orientation=landscape') center/cover no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: var(--light);
+    overflow: hidden;
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, rgba(65, 47, 20, 0.384) 0%, rgba(65, 47, 20, 0.6) 100%);
+    z-index: 1;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 800px;
+    padding: 0 2rem;
+    animation: fadeInUp 1s ease;
+}
+
+.hero-title {
+    animation: fadeInUp 1.2s ease-out 0.3s both;
+    font-family: "Pinyon Script", cursive;
+    font-size: 7rem;
+    margin: 0.5rem 0;
+    color: var(--beige);
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+    line-height: 1.1;
+}
+
+.hero-subtitle {
+    animation: fadeInUp 1s ease-out;
+    font-family: "Red Hat Display", sans-serif;
+    font-size: 1.2rem;
+    font-weight: 400;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    margin-bottom: 0;
+    color: var(--beige);
+}
+
+.hero-text {
+    font-family: "Red Hat Display", sans-serif;
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin: 1.5rem auto 2rem;
+    max-width: 600px;
+    color: var(--beige);
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.btn-primary {
+    background-color: var(--dark);
+    color: white;
+    padding: 0.8rem 2rem;
+    border-radius: 30px;
+    text-decoration: none;
+    font-family: "Red Hat Display", sans-serif;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    border: 2px solid var(--primary);
+}
+
+.btn-primary:hover {
+    background-color: transparent;
+    color: var(--light);
+    transform: translateY(-3px);
+}
+
+.btn-secondary {
+    background-color: transparent;
+    color: var(--light);
+    padding: 0.8rem 2rem;
+    border-radius: 30px;
+    text-decoration: none;
+    font-family: "Red Hat Display", sans-serif;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    border: 2px solid var(--light);
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.btn-secondary:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    transform: translateY(-3px);
+}
+
+.scroll-indicator {
+    position: absolute;
+    bottom: 2rem;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 2;
+    animation: bounce 2s infinite;
+}
+
+.scroll-indicator i {
+    color: var(--light);
+    width: 30px;
+    height: 30px;
+}
+
+/* Animations */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0) translateX(-50%);
+    }
+    40% {
+        transform: translateY(-20px) translateX(-50%);
+    }
+    60% {
+        transform: translateY(-10px) translateX(-50%);
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+/* ========= About Styles ======= */
+.about-section {
+    padding: 5rem 0;
+    background-color: #70542a5e;
+    position: relative;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    position: relative;
+}
+
+.section-header {
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.section-header .section-subtitle {
+    font-family: "Red Hat Display", sans-serif;
+    font-size: 1rem;
+    font-weight: 500;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--dark);
+    margin-bottom: 0.5rem;
+}
+
+.section-header .section-title {
+    font-family: "Cormorant", sans-serif;
+    font-size: 2.4rem;
+    font-weight: 500;
+    color: var(--dark);
+    margin: 0;
+    line-height: 1.2;
+}
+
+.divider {
+    width: 50px;
+    height: 2px;
+    background-color: var(--secondary);
+    margin: 1rem auto;
+}
+
+.about-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin: 2rem 0;
+}
+
+.about-item {
+    text-align: center;
+    padding: 2rem;
+    transition: all 0.3s ease;
+    background-color: #412f141e;
+}
+
+.about-content::before {
+    content: "";
+    position: absolute;
+    top: -10px;
+    left: -10px;
+    right: -10px;
+    bottom: -10px;
+    border: 1px solid var(--primary);
+    border-radius: 12px;
+    z-index: -1;
+    opacity: 0.3;
+}
+
+.about-item:hover {
+    transform: translateY(-5px);
+}
+
+.about-icon {
+    width: 60px;
+    height: 60px;
+    margin: 0 auto 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(191, 164, 111, 0.1);
+    border-radius: 50%;
+}
+
+.about-icon i {
+    color: var(--dark);
+    width: 24px;
+    height: 24px;
+}
+
+.about-item h3 {
+    font-family: "Red Hat Display", sans-serif;
+    font-size: 1.2rem;
+    color: var(--dark);
+    margin: 1rem 0;
+}
+
+.about-item p {
+    font-family: "Red Hat Display", sans-serif;
+    color: var(--dark);
+    line-height: 1.6;
+    font-size: 0.95rem;
+}
+
+.about-signature {
+    text-align: center;
+    margin-top: 1rem;
+    font-family: "Red Hat Display", sans-serif;
+}
+
+.about-signature p {
+    color: var(--dark);
+    margin-bottom: 0.5rem;
+}
+
+.signature {
+    font-family: "Pinyon Script", cursive;
+    font-size: 2rem;
+    color: var(--dark);
+}
+
+/* ======== Services Styles ======== */
+.services-section {
+    padding: 4rem 0;
+    background-color: var(--dark);
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 3rem;
+}
+
+.services-intro {
+    text-align: left;
+}
+
+.services-intro h2 {
+    font-family: "Pinyon Script", cursive;
+    font-size: 2.5rem;
+    color: var(--beige);
+    margin-bottom: 1rem;
+    font-weight: 500;
+}
+
+.intro-text {
+    font-family: "Red Hat Display", sans-serif;
+    font-size: 1.1rem;
+    font-weight: 200;
+    color: #e0ddd7;
+    line-height: 1.6;
+    margin-bottom: 2rem;
+}
+
+.services-image {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    object-position: top;
+    border-radius: 5px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.services-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.service-card {
+    background-color: var(--beige);
+    padding: 1.5rem;
+    border-radius: 2px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    display: flex;
+    gap: 1rem;
+    align-items: flex-start;
+}
+
+.service-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.service-icon {
+    width: 48px;
+    height: 48px;
+    background-color: rgba(144, 123, 83, 0.336);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.service-icon i {
+    color: var(--primary);
+    width: 20px;
+    height: 20px;
+}
+
+.service-content h3 {
+    font-family: "Red Hat Display", sans-serif;
+    font-size: 1.25rem;
+    color: var(--dark);
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+}
+
+.service-content p {
+    font-family: "Red Hat Display", sans-serif;
+    color: var(--dark);
+    line-height: 1.5;
+    font-size: 0.95rem;
+    opacity: 0.9;
+}
+
+/* Initialize Feather Icons */
+.feather {
+    width: 200px;
+    height: 20px;
+    stroke-width: 2;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    fill: none;
+}
+
+/* ======== Packages Section ======= */
+.packages-section {
+    padding: 4rem 0;
+    background-color: #70542a5e;
+    font-family: "Red Hat Display", sans-serif;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+.packages-section h2 {
+    font-family: "Playfair Display", sans-serif;
+    font-size: 2.5rem;
+    text-align: center;
+    color: var(--dark);
+    margin-bottom: 3.5rem;
+}
+
+.subtitle {
+    text-align: center;
+    color: var(--dark);
+    margin-bottom: 2rem;
+    font-size: 1.1rem;
+}
+
+.packages-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+}
+
+.package-card {
+    background-color: var(--beige);
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+.package-card:hover {
+    transform: translateY(-5px);
+}
+
+.package-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    object-position: center;
+}
+
+.package-content {
+    padding: 1.5rem;
+}
+
+.package-card h3 {
+    font-family: "Playfair Display", sans-serif;
+    font-size: 1.8rem;
+    text-align: center;
+    margin-bottom: .5rem;
+    color: var(--dark);
+}
+
+.price {
+    font-family: "Cormorant", sans-serif;
+    color: var(--primary);
+    font-weight: bold;
+    text-align: center;
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+}
+
+.package-card ul {
+    margin-bottom: 1.5rem;
+    padding-left: 0;
+    list-style: none;
+}
+
+.package-card li {
+    padding: 0.5rem 0;
+    border-bottom: 1px solid rgba(65, 47, 20, 0.1);
+    position: relative;
+    padding-left: 1.5rem;
+}
+
+.package-card li:before {
+    content: "✓";
+    color: var(--primary);
+    position: absolute;
+    left: 0;
+}
+
+.package-button {
+    width: 100%;
+    background-color: var(--primary);
+    color: white;
+    border: none;
+    padding: 0.8rem;
+    border-radius: 4px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.package-button:hover {
+    background-color: var(--secondary);
+}
+
+/* Popular Package */
+.popular {
+    position: relative;
+}
+
+.popular-badge {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: var(--primary);
+    color: white;
+    padding: 0.3rem 0.8rem;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    z-index: 1;
+}
+
+/* Modal Box PakAGES sTYLES */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.5);
+}
+
+.modal-content {
+    background-color: var(--beige);
+    margin: 10% auto;
+    padding: 2rem;
+    border-radius: 8px;
+    width: 90%;
+    max-width: 500px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+    position: relative;
+}
+
+.close-btn {
+    position: absolute;
+    right: 1rem;
+    top: 1rem;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: var(--dark);
+}
+
+.modal h3 {
+    font-family: "Pinyon Script", cursive;
+    font-size: 2rem;
+    color: var(--primary);
+    margin-bottom: .6rem;
+}
+
+.packagePrice {
+    margin-bottom: 1rem;
+}
+
+.form-group {
+    margin: 1rem 0;;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 0.8rem;
+    border: 1px solid rgba(65, 47, 20, 0.2);
+    border-radius: 4px;
+    font-family: "Red Hat Display", sans-serif;
+}
+
+.submit-btn {
+    background-color: var(--primary);
+    color: white;
+    border: none;
+    padding: 0.8rem 1.5rem;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 100%;
+    font-weight: 500;
+    margin-top: 1rem;
+    transition: background-color 0.3s;
+}
+
+.submit-btn:hover {
+    background-color: var(--secondary);
+}
+
+/* ====== Gllaery Styles ======= */
+/* Gallery Section */
+.gallery-section {
+    padding: 4rem 0;
+    background-color: var(--beige);
+    font-family: "Red Hat Display", sans-serif;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+}
+
+.section-title {
+    font-family: "Pinyon Script", cursive;
+    font-size: 2.5rem;
+    color: var(--dark);
+    text-align: center;
+    margin-bottom: 0.5rem;
+}
+
+.section-subtitle {
+    text-align: center;
+    color: var(--primary);
+    margin-bottom: 3rem;
+    font-size: 1rem;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+}
+
+/* Gallery Grid */
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+.gallery-item {
+    position: relative;
+    overflow: hidden;
+    border-radius: 8px;
+    aspect-ratio: 1/1;
+    cursor: pointer;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(65, 47, 20, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.overlay i {
+    color: white;
+    width: 30px;
+    height: 30px;
+}
+
+.gallery-item:hover img {
+    transform: scale(1.05);
+}
+
+.gallery-item:hover .overlay {
+    opacity: 1;
+}
+
+/* Slider Navigation */
+.slider-nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+.slider-prev, .slider-next {
+    background: var(--primary);
+    color: white;
+    border: none;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.slider-prev:hover, .slider-next:hover {
+    background: var(--secondary);
+}
+
+.slider-dots {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.slider-dots .dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: rgba(144, 123, 83, 0.3);
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.slider-dots .dot.active {
+    background: var(--primary);
+    transform: scale(1.2);
+}
+
+/* Lightbox */
+.lightbox {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.9);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+}
+
+.lightbox.active {
+    opacity: 1;
+    pointer-events: all;
+}
+
+.lightbox-img {
+    max-height: 80vh;
+    max-width: 90vw;
+    object-fit: contain;
+}
+
+.close-btn {
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    color: white;
+    font-size: 2rem;
+    cursor: pointer;
+}
+
+/* ========= Testimonial Styles ========= */
+.testimonials {
+    padding: 4rem 0;
+    background-color: var(--beige);
+    font-family: "Red Hat Display", sans-serif;
+    min-height: 70vh;
+    position: relative;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 7%;
+}
+
+.section-title {
+    font-family: "Playfair Display", sans-serif;
+    font-size: 2.5rem;
+    color: var(--dark);
+    text-align: center;
+    margin-bottom: 0.2rem;
+}
+
+.section-subtitle {
+    text-align: center;
+    color: var(--primary);
+    margin-bottom: 2.4rem;
+    font-size: .9rem;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+}
+
+.testimonial-slider {
+    position: relative;
+    min-height: 300px;
+    overflow: hidden;
+}
+
+.testimonial-card {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+    background-color: white;
+    border-radius: 8px;
+    padding: 2rem;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+}
+
+.testimonial-card.active {
+    position: relative;
+    opacity: 1;
+}
+
+.testimonial-content {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: var(--dark);
+    margin-bottom: 1.5rem;
+    font-style: italic;
+    position: relative;
+    padding-left: 1.5rem;
+}
+
+.testimonial-content::before {
+    content: '"';
+    position: absolute;
+    left: 0;
+    top: -0.5rem;
+    font-size: 2.5rem;
+    color: var(--primary);
+    opacity: 0.3;
+    font-family: serif;
+}
+
+.testimonial-author {
+    display: flex;
+    align-items: center;
+}
+
+.author-info h4 {
+    color: var(--dark);
+    margin-bottom: 0.2rem;
+    font-size: 1.1rem;
+}
+
+.author-info p {
+    color: var(--primary);
+    font-size: 0.9rem;
+    margin: 0;
+}
+
+.slider-dots {
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+}
+
+.dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: rgba(144, 123, 83, 0.3);
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.dot.active {
+    background-color: var(--primary);
+    transform: scale(1.2);
+}
+
+/* ===== Contact Styles ===== */
+.contact-modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(65, 47, 20, 0.8);
+    z-index: 1000;
+    backdrop-filter: blur(3px);
+  }
+  
+  .modal-content {
+    background: var(--beige);
+    max-width: 500px;
+    margin: 5% auto;
+    padding: 2rem;
+    border-radius: 8px;
+    position: relative;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+    border: 1px solid var(--primary);
+  }
+  
+  .close-modal {
+    position: absolute;
+    top: 1rem;
+    right: 1.5rem;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: var(--dark);
+  }
+  
+  .modal-header {
+    text-align: center;
+    margin-bottom: 1.5rem;
+    border-bottom: 1px dashed var(--primary);
+    padding-bottom: 1rem;
+  }
+  
+  .modal-header h3 {
+    font-family: "Pinyon Script", cursive;
+    font-size: 2rem;
+    color: var(--primary);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+  }
+  
+  .modal-header p {
+    color: var(--dark);
+    margin-top: 0.5rem;
+  }
+  
+  .form-group {
+    margin-bottom: 1.2rem;
+  }
+  
+  .form-group input,
+  .form-group select,
+  .form-group textarea {
+    width: 100%;
+    padding: 0.8rem;
+    border: 1px solid rgba(144, 123, 83, 0.3);
+    border-radius: 4px;
+    font-family: "Red Hat Display", sans-serif;
+    background: white;
+  }
+  
+  .form-group textarea {
+    resize: vertical;
+    min-height: 80px;
+  }
+  
+  .submit-btn {
+    background: var(--primary);
+    color: white;
+    width: 100%;
+    padding: 0.8rem;
+    border: none;
+    border-radius: 4px;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    cursor: pointer;
+    transition: all 0.3s;
+  }
+  
+  .submit-btn:hover {
+    background: var(--secondary);
+  }
+  
+  /* Decorations */
+  .modal-content::before {
+    content: "";
+    position: absolute;
+    top: -10px;
+    left: -10px;
+    right: -10px;
+    bottom: -10px;
+    border: 1px solid var(--primary);
+    border-radius: 12px;
+    z-index: -1;
+    opacity: 0.3;
+  }
+
+/* WhatsApp Floating Button */
+.whatsapp-float {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background-color: #25D366; /* WhatsApp green */
+    color: white;
+    text-decoration: none;
+    padding: 12px 20px;
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    z-index: 999;
+    transition: all 0.3s ease;
+}
+
+.whatsapp-float:hover {
+    background-color: #128C7E; /* Darker WhatsApp green */
+    transform: translateY(-3px);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
+}
+
+.whatsapp-float i {
+    width: 20px;
+    height: 20px;
+}
+
+.whatsapp-float span {
+    font-family: "Red Hat Display", sans-serif;
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+/* ===== Footer Section ===== */
+.footer {
+    background-color: var(--dark);
+    color: var(--beige);
+    padding: 3rem 0 0;
+    font-family: "Red Hat Display", sans-serif;
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+}
+
+.footer-brand {
+    margin-bottom: 2rem;
+}
+
+.footer-logo {
+    font-family: "Pinyon Script", cursive;
+    font-size: 2rem;
+    color: var(--beige);
+    margin-bottom: 1rem;
+}
+
+.footer-description {
+    color: rgba(247, 240, 232, 0.8);
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+    max-width: 300px;
+}
+
+.social-links {
+    display: flex;
+    gap: 1rem;
+}
+
+.social-links a {
+    color: var(--beige);
+    width: 36px;
+    height: 36px;
+    border: 1px solid rgba(247, 240, 232, 0.3);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+}
+
+.social-links a:hover {
+    background-color: var(--primary);
+    border-color: var(--primary);
+    transform: translateY(-3px);
+}
+
+.footer-menus {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 2rem;
+}
+
+.menu-title {
+    font-size: 1.1rem;
+    color: var(--beige);
+    margin-bottom: 1rem;
+    position: relative;
+    padding-bottom: 0.5rem;
+}
+
+.menu-title::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 40px;
+    height: 2px;
+    background-color: var(--primary);
+}
+
+.footer-menu ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-menu li {
+    margin-bottom: 0.6rem;
+}
+
+.footer-menu a {
+    color: rgba(247, 240, 232, 0.7);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-menu a:hover {
+    color: var(--primary);
+}
+
+.contact-info li {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+    color: rgba(247, 240, 232, 0.7);
+}
+
+.contact-info i {
+    margin-top: 3px;
+    flex-shrink: 0;
+}
+
+.copyright {
+    text-align: center;
+    padding: 1.5rem;
+    margin-top: 3rem;
+    border-top: 1px solid rgba(247, 240, 232, 0.1);
+    color: rgba(247, 240, 232, 0.5);
+    font-size: 0.9rem;
+}
+
+/* Feather Icons */
+.feather {
+    width: 16px;
+    height: 16px;
+    stroke-width: 2;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    fill: none;
+}
+
+/* Media Querys */
+@media (min-width: 1024px) {
+    .gallery-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+@media (min-width: 768px) {
+    .services-grid {
+        grid-template-columns: 1fr 1fr;
+        align-items: center;
+    }
+    
+    .services-intro h2 {
+        font-size: 3rem;
+    }
+    
+    .services-image {
+        height: 400px;
+    }
+
+    .packages-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    
+    .popular {
+        transform: scale(1.03);
+    }
+
+    .gallery-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1.5rem;
+    }
+
+    .footer-container {
+        grid-template-columns: 1fr 2fr;
+    }
+}
+
+
+@media (max-width: 768px) {
+
+    header {
+        padding: 0;
+    }
+
+    .navbar {
+        padding: .5rem 7%;
+        align-items: center;
+    }
+
+    .nav-logo h1 {
+        font-size: 2rem;
+    }
+    
+
+    .nav-link {
+        position: fixed;
+        top: 0;
+        left: -100%;
+        width: 70%;
+        height: 100vh;
+        background-color: var(--beige);
+        box-shadow: 2px 0 15px rgba(0, 0, 0, 0.1);
+        transition: all 0.4s ease;
+        padding-top: 5rem;
+        z-index: 100;
+    }
+
+    .nav-link.active {
+        left: 0;
+    }
+
+    .nav-link ul {
+        flex-direction: column;
+        gap: 1.5rem;
+        padding: 0 2rem;
+    }
+
+    .nav-link a {
+        font-size: 1.1rem;
+        padding: 0.5rem 0;
+        display: block;
+        border-bottom: 1px solid rgba(65, 47, 20, 0.1);
+    }
+
+    .nav-link a:hover {
+        padding-left: 0.5rem;
+    }
+
+    .nav-link a::after {
+        display: none;
+    }
+
+    .menu-toggle {
+        display: block;
+        position: absolute;
+        top: 1.5rem;
+        right: 1.5rem;
+    }
+
+    /* Hero */
+    .hero-title {
+        font-size: 3.5rem;
+    }
+    
+    .hero-subtitle {
+        font-size: 1rem;
+    }
+    
+    .hero-text {
+        font-size: 1rem;
+    }
+    
+    .hero-buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .btn-primary, .btn-secondary {
+        width: 80%;
+        justify-content: center;
+    }
+
+    /* About */
+    .about-section {
+        padding: 3rem 0;
+    }
+    
+    .section-title {
+        font-size: 2.5rem;
+    }
+    
+    .about-content {
+        grid-template-columns: 1fr;
+    }
+
+    /* Overlay saat menu aktif */
+    .menu-overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.5);
+        z-index: 99;
+        opacity: 0;
+        visibility: hidden;
+        transition: all 0.3s ease;
+    }
+
+    .menu-overlay.active {
+        opacity: 1;
+        visibility: visible;
+    }
+
+    .whatsapp-float {
+        bottom: 20px;
+        right: 20px;
+        padding: 10px 16px;
+    }
+    
+    .whatsapp-float span {
+        display: none;
+    }
+    
+    .whatsapp-float i {
+        width: 24px;
+        height: 24px;
+    }
+}
+
+@media (max-width: 600px) {
+    .modal-content {
+        margin: 20% auto;
+        padding: 1.5rem;
+    }
+
+    .modal-content {
+        margin: 10% auto;
+        width: 90%;
+        padding: 1.5rem;
+      }
+}
